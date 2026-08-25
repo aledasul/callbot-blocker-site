@@ -1,25 +1,205 @@
-POLÍTICA DE PRIVACIDADE - CALLBOT BLOCKER
-Esta Política de Privacidade descreve como o aplicativo CallBot Blocker lida com as informações do usuário.
-Desenvolvemos esta ferramenta sob a filosofia de segurança máxima, privacidade absoluta e controle offline.
-1. Não Coleta de Dados Pessoais e Armazenamento Local
-O CallBot Blocker não coleta, não transmite, não compartilha e não armazena nenhum dado pessoal,
-número de telefone ou histórico de chamadas em servidores externos. Toda e qualquer informação inserida no
-aplicativo (como lista negra de números) ou gerada por ele (histórico local de chamadas bloqueadas) é salva
-de forma estritamente confidencial no banco de dados local do seu próprio aparelho (Room Database).
-2. Permissões de Sistema Requeridas
-Para exercer suas funções de segurança de chamadas, o aplicativo requer as seguintes permissões:
-• Triagem de Chamadas (ROLE_CALL_SCREENING): Utilizada para analisar as ligações recebidas em
-tempo real e aplicar as regras de rejeição ativa ou silenciamento conforme o modo de proteção escolhido pelo
-usuário.
-• Ler Contatos (READ_CONTACTS): Utilizada de forma estritamente local para verificar se o número que
-está ligando está salvo na agenda de contatos do usuário, permitindo o desvio inteligente do filtro para
-pessoas conhecidas.
-• Notificações (POST_NOTIFICATIONS): Utilizada para informar o usuário sobre chamadas bloqueadas e
-para exibir o banner de triagem interativa.
-3. Exclusão de Dados
-O usuário tem controle absoluto sobre todas as informações do aplicativo. A qualquer momento, é possível
-limpar definitivamente os dados do aplicativo acessando as configurações do sistema Android ou limpando o
-histórico de chamadas e lista negra dentro da própria interface gráfica do aplicativo.
-4. Alterações nesta Política
-Podemos atualizar esta Política de Privacidade de tempos em tempos. Recomendamos que você revise este
-documento periodicamente para estar ciente de qualquer alteração.
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CallBot Blocker - Proteção Inteligente e Privada</title>
+    <!-- Tailwind CSS para design responsivo e moderno -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0f172a', /* slate-900 */
+                            card: '#1e293b', /* slate-800 */
+                            primary: '#10b981', /* emerald-500 */
+                            secondary: '#059669', /* emerald-600 */
+                            text: '#f8fafc' /* slate-50 */
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-dark text-slate-100 font-sans antialiased selection:bg-brand-primary selection:text-brand-dark">
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-3">
+                <span class="text-3xl">🛡️</span>
+                <div>
+                    <h1 class="text-xl font-bold tracking-tight text-white flex items-center gap-1">
+                        CallBot Blocker
+                    </h1>
+                    <p class="text-xs text-brand-primary font-medium tracking-wide uppercase">Privacidade em Primeiro Lugar</p>
+                </div>
+            </div>
+            <nav class="flex gap-6 text-sm">
+                <a href="#funcionalidades" class="text-slate-400 hover:text-white transition">Funcionalidades</a>
+                <a href="#diferenciais" class="text-slate-400 hover:text-white transition">Privacidade</a>
+                <a href="#politica" class="bg-brand-primary/10 text-brand-primary border border-brand-primary/20 px-3 py-1 rounded-full hover:bg-brand-primary/20 transition">Política de Privacidade</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative py-16 md:py-24 overflow-hidden border-b border-slate-800">
+        <div class="max-w-5xl mx-auto px-4 text-center relative z-10">
+            <span class="bg-brand-primary/10 text-brand-primary text-xs font-semibold px-4 py-1.5 rounded-full border border-brand-primary/20 tracking-wider uppercase inline-block mb-6">
+                Lançamento Oficial 2026
+            </span>
+            <h2 class="text-4xl md:text-6xl font-black tracking-tight text-white mb-6 leading-tight">
+                Recupere a paz do seu telefone.<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-emerald-400">
+                    Sem abrir mão da sua privacidade.
+                </span>
+            </h2>
+            <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+                Um bloqueador de chamadas inteligente, 100% offline, sem anúncios e projetado para manter seus dados exatamente onde pertencem: no seu bolso.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#funcionalidades" class="bg-brand-primary hover:bg-brand-secondary text-brand-dark font-bold px-8 py-4 rounded-xl transition shadow-lg shadow-brand-primary/20 text-center">
+                    Conhecer Recursos
+                </a>
+                <a href="#politica" class="bg-slate-800 hover:bg-slate-700 text-white font-medium px-8 py-4 rounded-xl border border-slate-700 transition text-center">
+                    Ler Termos de Privacidade
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FUNCIONALIDADES SECTION -->
+    <section id="funcionalidades" class="py-20 bg-slate-900/50 border-b border-slate-800">
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h3 class="text-3xl font-bold text-white mb-4">Proteção sob medida para você</h3>
+                <p class="text-slate-400 max-w-lg mx-auto">Três níveis de triagem inteligente e controle total sobre o seu tempo de foco.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-brand-card p-8 rounded-2xl border border-slate-800 hover:border-brand-primary/30 transition duration-300">
+                    <span class="text-4xl block mb-6">⚙️</span>
+                    <h4 class="text-xl font-bold text-white mb-3">Triagem Inteligente</h4>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Escolha entre o Modo Interativo (aviso de spam), Modo Silencioso (envio para o histórico) ou o Modo Radical para paz absoluta.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-brand-card p-8 rounded-2xl border border-slate-800 hover:border-brand-primary/30 transition duration-300 relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 bg-brand-primary text-brand-dark text-[10px] font-bold px-3 py-1 rounded-bl-lg uppercase tracking-wider">Novo</div>
+                    <span class="text-4xl block mb-6">⏳</span>
+                    <h4 class="text-xl font-bold text-white mb-3">Temporizador Radical</h4>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Ative o Modo Radical por um tempo determinado (como 30 min, 1h ou tempo personalizado) e o aplicativo reverte para o estado anterior automaticamente.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-brand-card p-8 rounded-2xl border border-slate-800 hover:border-brand-primary/30 transition duration-300">
+                    <span class="text-4xl block mb-6">📱</span>
+                    <h4 class="text-xl font-bold text-white mb-3">Histórico Organizado</h4>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Monitore de forma simples todas as tentativas de spam que o aplicativo bloqueou, mantendo uma lista limpa e de fácil controle.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DIFERENCIAIS DE PRIVACIDADE -->
+    <section id="diferenciais" class="py-20 border-b border-slate-800">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="bg-gradient-to-br from-brand-card to-slate-900 p-8 md:p-12 rounded-3xl border border-slate-800 relative">
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <div class="text-6xl md:text-8xl">🔒</div>
+                    <div>
+                        <h3 class="text-2xl md:text-3xl font-extrabold text-white mb-4">Por que o CallBot Blocker é diferente?</h3>
+                        <p class="text-slate-300 text-sm md:text-base leading-relaxed mb-6">
+                            Diferente de outros aplicativos "gratuitos" que exigem o upload da sua lista de contatos para servidores na nuvem e lucram vendendo seus dados, o CallBot Blocker protege você de forma ética.
+                        </p>
+                        <ul class="space-y-3 text-sm text-slate-400">
+                            <li class="flex items-center gap-2"><span class="text-brand-primary">✔</span> <strong>100% Offline:</strong> Nenhuma ligação ou contato sai do seu aparelho.</li>
+                            <li class="flex items-center gap-2"><span class="text-brand-primary">✔</span> <strong>Sem Banco de Dados na Nuvem:</strong> Suas informações residem em um banco local seguro.</li>
+                            <li class="flex items-center gap-2"><span class="text-brand-primary">✔</span> <strong>Sem Anúncios:</strong> Sem poluição visual, pop-ups irritantes ou consumo extra de bateria.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- POLÍTICA DE PRIVACIDADE SECTION -->
+    <section id="politica" class="py-20 bg-slate-950/60 scroll-mt-16">
+        <div class="max-w-3xl mx-auto px-4">
+            <div class="border border-slate-800 bg-slate-900/50 p-8 md:p-12 rounded-2xl shadow-2xl">
+                <h3 class="text-2xl md:text-3xl font-extrabold text-white mb-2 text-center">Política de Privacidade</h3>
+                <p class="text-xs text-brand-primary text-center uppercase tracking-wider mb-8">Última atualização: Agosto de 2026</p>
+                
+                <div class="prose prose-invert max-w-none text-slate-300 text-sm space-y-6 leading-relaxed">
+                    <p>
+                        O <strong>CallBot Blocker</strong> foi desenvolvido com foco estrito na segurança da informação e na privacidade do usuário. Esta política explica de forma transparente como o aplicativo opera.
+                    </p>
+
+                    <div>
+                        <h4 class="text-base font-bold text-white mb-2">1. Coleta e Uso de Informações</h4>
+                        <p>
+                            <strong>Nós não coletamos nenhum dado pessoal.</strong> O aplicativo não exige a criação de contas, login, preenchimento de formulários ou fornecimento de e-mails. Toda a operação de triagem e gerenciamento de números ocorre estritamente dentro do dispositivo do usuário.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h4 class="text-base font-bold text-white mb-2">2. Banco de Dados Local (Room)</h4>
+                        <p>
+                            Todas as listas de contatos, números marcados para bloqueio e históricos de triagem de chamadas são mantidos em um banco de dados local seguro (armazenado nativamente no dispositivo). Esses dados pertencem exclusivamente ao usuário e são excluídos permanentemente no momento em que o aplicativo é desinstalado do aparelho.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h4 class="text-base font-bold text-white mb-2">3. Permissões Necessárias e Justificativas</h4>
+                        <ul class="list-disc pl-5 space-y-2 mt-2">
+                            <li><strong>Serviço de Triagem de Chamadas (CallScreeningService):</strong> Necessário para avaliar o número de origem de chamadas recebidas em tempo real e decidir pelo bloqueio com base no nível de proteção selecionado pelo usuário.</li>
+                            <li><strong>Acesso aos Contatos (Opcional):</strong> Utilizado estritamente em ambiente local para ignorar o bloqueio caso o número chamador esteja registrado na sua agenda de contatos confiáveis. Nenhum contato é transmitido.</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="text-base font-bold text-white mb-2">4. Transferência e Compartilhamento de Dados</h4>
+                        <p>
+                            Como o aplicativo opera de forma 100% offline, <strong>não existe transmissão, venda, compartilhamento ou distribuição de informações</strong> para terceiros, servidores de nuvem, plataformas de anúncio ou serviços analíticos.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h4 class="text-base font-bold text-white mb-2">5. Alterações nesta Política</h4>
+                        <p>
+                            Esta política de privacidade poderá sofrer atualizações caso novas funcionalidades locais sejam inseridas, mantendo sempre o compromisso inabalável de não coletar dados externos ou expor o usuário.
+                        </p>
+                    </div>
+
+                    <div class="border-t border-slate-800 pt-6 text-xs text-slate-500 text-center">
+                        <p>Dúvidas ou suporte? Entre em contato por meio do repositório oficial de código.</p>
+                        <p class="mt-2 text-brand-primary">© 2026 CallBot Blocker. Todos os direitos reservados de forma ética.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-slate-900 bg-slate-950 py-8 text-center text-xs text-slate-500">
+        <div class="max-w-5xl mx-auto px-4 space-y-2">
+            <p>🛡️ <strong>CallBot Blocker</strong> — Projetado de forma livre e independente.</p>
+            <p>Desenvolvido localmente no Android Studio utilizando Kotlin, Room e Jetpack Compose.</p>
+            <p class="pt-4">© 2026 Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
+```
