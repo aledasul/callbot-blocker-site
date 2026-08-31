@@ -83,35 +83,53 @@
             </div>
             
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Card 1 -->
-                <div class="bg-brand-card p-8 rounded-2xl border border-slate-800 hover:border-brand-primary/30 transition duration-300">
-                    <span class="text-4xl block mb-6">⚙️</span>
-                    <h4 class="text-xl font-bold text-white mb-3">Triagem Inteligente</h4>
-                    <p class="text-sm text-slate-400 leading-relaxed">
-                        Escolha entre o Modo Interativo (aviso de spam), Modo Silencioso (envio para o histórico) ou o Modo Radical para paz absoluta.
-                    </p>
+               <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Card 1: Triagem Inteligente -->
+                <div class="bg-brand-card p-6 rounded-2xl border border-slate-800 hover:border-brand-primary/30 transition duration-300 flex flex-col justify-between">
+                    <div>
+                        <span class="text-4xl block mb-4">⚙️</span>
+                        <h4 class="text-lg font-bold text-white mb-2">Triagem Inteligente</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Escolha entre o Modo Interativo (aviso de spam), Modo Silencioso (envio para o histórico) ou o Modo Radical para paz absoluta.
+                        </p>
+                    </div>
                 </div>
 
-                <!-- Card 2 -->
-                <div class="bg-brand-card p-8 rounded-2xl border border-slate-800 hover:border-brand-primary/30 transition duration-300 relative overflow-hidden group">
-                    <div class="absolute top-0 right-0 bg-brand-primary text-brand-dark text-[10px] font-bold px-3 py-1 rounded-bl-lg uppercase tracking-wider">Novo</div>
-                    <span class="text-4xl block mb-6">⏳</span>
-                    <h4 class="text-xl font-bold text-white mb-3">Temporizador Radical</h4>
-                    <p class="text-sm text-slate-400 leading-relaxed">
-                        Ative o Modo Radical por um tempo determinado (como 30 min, 1h ou tempo personalizado) e o aplicativo reverte para o estado anterior automaticamente.
-                    </p>
+                <!-- Card 2: Temporizador Radical -->
+                <div class="bg-brand-card p-6 rounded-2xl border border-slate-800 hover:border-brand-primary/30 transition duration-300 relative overflow-hidden group flex flex-col justify-between">
+                    <div class="absolute top-0 right-0 bg-brand-primary text-brand-dark text-[9px] font-bold px-2 py-0.5 rounded-bl-lg uppercase tracking-wider">Novo</div>
+                    <div>
+                        <span class="text-4xl block mb-4">⏳</span>
+                        <h4 class="text-lg font-bold text-white mb-2">Temporizador Radical</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Ative o Modo Radical por um tempo determinado (como 30 min, 1h ou tempo personalizado) e o aplicativo reverte para o estado anterior automaticamente.
+                        </p>
+                    </div>
                 </div>
 
-                <!-- Card 3 -->
-                <div class="bg-brand-card p-8 rounded-2xl border border-slate-800 hover:border-brand-primary/30 transition duration-300">
-                    <span class="text-4xl block mb-6">📱</span>
-                    <h4 class="text-xl font-bold text-white mb-3">Histórico Organizado</h4>
-                    <p class="text-sm text-slate-400 leading-relaxed">
-                        Monitore de forma simples todas as tentativas de spam que o aplicativo bloqueou, mantendo uma lista limpa e de fácil controle.
-                    </p>
+                <!-- Card 3: Exceção de Emergência (NOVO!) -->
+                <div class="bg-brand-card p-6 rounded-2xl border border-slate-800 hover:border-brand-primary/30 transition duration-300 flex flex-col justify-between border-brand-primary/20">
+                    <div>
+                        <span class="text-4xl block mb-4">🚨</span>
+                        <h4 class="text-lg font-bold text-white mb-2">Foco com Segurança</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Se o mesmo número desconhecido ligar duas vezes seguidas em menos de 5 minutos, o bloqueio é suspenso temporariamente para garantir que chamadas urgentes passem.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 4: Histórico Organizado -->
+                <div class="bg-brand-card p-6 rounded-2xl border border-slate-800 hover:border-brand-primary/30 transition duration-300 flex flex-col justify-between">
+                    <div>
+                        <span class="text-4xl block mb-4">📱</span>
+                        <h4 class="text-lg font-bold text-white mb-2">Histórico Organizado</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Monitore de forma simples todas as tentativas de spam que o aplicativo bloqueou, mantendo uma lista limpa e de fácil controle local.
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
+                
     </section>
 
     <!-- DIFERENCIAIS DE PRIVACIDADE -->
@@ -163,6 +181,12 @@
         </ul>
 
         <h4 class="text-base font-bold text-white mb-2">2. Permissões Sensíveis Requeridas e Justificativas Técnicas</h4>
+          <div>
+                        <h4 class="text-base font-bold text-white mb-2">4. Exceção de Emergência e Segurança</h4>
+                        <p>
+                            Para garantir a segurança do usuário em situações críticas, o aplicativo implementa uma regra lógica de bypass offline: caso um número não agendado tente ligar duas vezes seguidas no intervalo de 5 minutos, o sistema de triagem suspende temporariamente a rejeição para permitir que potenciais chamadas de emergência (hospitalares, familiares ou serviços essenciais) completem o toque. Todo esse processamento ocorre estritamente de forma local e offline no dispositivo.
+                        </p>
+                    </div>
         <p><strong>A. Papel de Triagem de Chamadas (ROLE_CALL_SCREENING):</strong> Permite que o aplicativo seja notificado sobre novas chamadas e decida pelo bloqueio ou liberação em tempo real. O número analisado nunca é transmitido.</p>
         <p><strong>B. Ler Contatos (READ_CONTACTS):</strong> Usado apenas para a Lista Branca Automática, garantindo que contatos confiáveis nunca sejam bloqueados. Nenhum dado é transmitido.</p>
         <p><strong>C. Enviar Notificações (POST_NOTIFICATIONS):</strong> Necessário para alertar sobre chamadas bloqueadas, término do Temporizador Radical e exibir painel de triagem rápida.</p>
